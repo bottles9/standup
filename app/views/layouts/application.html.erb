@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Standup</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://kit.fontawesome.com/youruniqueID.js"></script>
-  </head>
+<head>
+  <title>Standup</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script src="https://kit.fontawesome.com/youruniqueID.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170896584-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-170896584-1');
+  </script>
+
+</head>
 
 <body class="sidebar-mini">
   <div class="wrapper">
     <%= render partial: "layouts/header" %>
     <%= render partial: "layouts/sidebar" %>
-  <div class="content-wrapper">
-    <%= flash_messages %>
-    <%= yield %>
-  </div>
-  <%= render partial: "layouts/footer" %>
+    <div class="content-wrapper">
+      <%= flash_messages %>
+      <%= yield %>
+    </div>
+    <%= render partial: "layouts/footer" %>
   </div>
 </body>
+
 </html>
