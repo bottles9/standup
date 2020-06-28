@@ -1,4 +1,6 @@
 class AccountsController < ApplicationController
+    load_and_authorize_resource
+    
     def new
         redirect_to root_path unless current_user.account.nil?
 

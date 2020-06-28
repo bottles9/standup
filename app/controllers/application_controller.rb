@@ -9,6 +9,11 @@ class ApplicationController < ActionController::Base
     layout :layout_by_resource
 
     helper_method :current_account
+    #to redirect and inform the user they do not have permissions
+    rescue_from CanCan::AccessDenied do |exception|
+        redirect_to root_url, :error => exception.message
+        end
+        add_flash_types :error
 
     def current_account
         @current_account ||= current_user.account
