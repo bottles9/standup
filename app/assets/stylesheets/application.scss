@@ -22,8 +22,12 @@
 
 
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&lang=en");
+@import "font-awesome-sprockets";
 @import "bootstrap/scss/bootstrap";
 @import 'admin-lte/dist/css/adminlte';
 @import 'bootstrap-datepicker/dist/css/bootstrap-datepicker';
-@import "font-awesome-sprockets";
+
 @import "font-awesome";
+$font-family-icon: 'Font Awesome 5 Pro';
+$fa-var-check: "\f00c";
+@import 'awesome-bootstrap-checkbox/awesome-bootstrap-checkbox';
