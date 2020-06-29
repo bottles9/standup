@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
+ .cursor {
+    cursor: pointer;
+    }
 
 
 
@@ -22,3 +24,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&lang=en");
 @import "bootstrap/scss/bootstrap";
 @import 'admin-lte/dist/css/adminlte';
+@import 'bootstrap-datepicker/dist/css/bootstrap-datepicker';
+@import "font-awesome-sprockets";
+@import "font-awesome";

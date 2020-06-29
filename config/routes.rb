@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :standups
   devise_for :users, controllers: {registrations: "registrations"}
   resource :accounts
 
@@ -13,7 +14,8 @@ Rails.application.routes.draw do
 
   get 'activity/mine'
   get 'activity/feed'
-
+  
+  get 'dates/:date', to: 'dates#update', as: 'update_date'
   root 'activity#mine'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
